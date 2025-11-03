@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen overflow-x-clip py-96" id="hero">
       <div className="absolute inset-0 z-0 flex items-start justify-center overflow-hidden md:items-center">
-        <h1 className="text-center text-[3rem] font-bold whitespace-nowrap text-purple-200 opacity-[0.15] md:text-[8rem]">
+        <h1 className="text-center text-[3rem] text-gray-800/30 dark:text-purple-400/10 font-bold whitespace-nowrap transition-colors md:text-[8rem]">
           GYŐRI <br /> JEDLIK ÁNYOS <br /> TECHNIKUM
         </h1>
       </div>
@@ -41,12 +41,12 @@ const Hero = () => {
         >
           {sizes.map((size, index) => (
             <motion.div
-              className={`absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col justify-between shadow-[0_0_120px_inset] shadow-purple-200/10`}
+              className={`absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col justify-between shadow-[0_0_120px_inset]  shadow-purple-500/30 dark:shadow-purple-200/20`}
               key={index}
               style={{ width: `${size.width}px`, height: `${size.height}px` }}
             >
-              <p className="mt-4 text-center text-4xl text-purple-200/30">{size.text}</p>
-              <p className="mb-6 text-center text-4xl text-purple-200/30">{size.text2}</p>
+              <p className="mt-4 text-center text-4xl text-gray-900/60 dark:text-purple-200/30">{size.text}</p>
+              <p className="mb-6 text-center text-4xl text-gray-900/60 dark:text-purple-200/30">{size.text2}</p>
             </motion.div>
           ))}
         </motion.div>

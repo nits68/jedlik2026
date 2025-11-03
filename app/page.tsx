@@ -10,7 +10,7 @@ import TextReveal from "@/components/TextReveal";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-gray-100 dark:bg-gray-900 transition-colors">
       <Navbar />
       <Hero />
       <KeyMetrics />
@@ -20,6 +20,6 @@ export default function Home() {
       <Services />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }

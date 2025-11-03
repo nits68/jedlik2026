@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import ThemeToggle from "@/components/ThemeToggle";
 
 type NavLink = {
   title: string;
@@ -29,13 +30,13 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed z-50 flex w-full justify-center font-bold text-white">
-      <div className="mx-auto mt-2 hidden max-w-[500px] items-center justify-center rounded-3xl border border-white/20 p-2 backdrop-blur-3xl md:flex">
+    <div className="fixed z-50 flex w-full justify-center font-bold dark:text-white">
+      <div className="mx-auto mt-2 hidden max-w-[500px] items-center justify-center rounded-3xl border border-gray-800/20 p-2 backdrop-blur-3xl md:flex dark:border-white/20">
         <ul className="flex flex-row space-x-8 p-2">
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
-                className="transform transition-all duration-300 ease-in-out hover:skew-x-12 hover:text-white/50"
+                className="transform text-gray-500 transition-all duration-300 ease-in-out hover:skew-x-12 hover:text-gray-800 dark:hover:text-white/50"
                 href={link.path}
               >
                 {link.title}
@@ -43,17 +44,18 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        <ThemeToggle />
       </div>
 
       <div
-        className="absolute top-5 right-14 z-50 rounded border border-white/70 p-2 text-white/70 md:hidden"
+        className="absolute top-5 right-14 z-50 rounded border dark:border-white/70 p-2 dark:text-white/70 md:hidden"
         onClick={toggleNav}
       >
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
 
       <div
-        className={`fixed top-0 left-0 z-40 h-full w-full transform bg-black/90 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-40 h-full w-full transform bg-white dark:bg-black/90 transition-transform duration-300 ${
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -65,6 +67,9 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li onClick={closeNav}>
+            <ThemeToggle />
+          </li>
         </ul>
       </div>
     </div>
