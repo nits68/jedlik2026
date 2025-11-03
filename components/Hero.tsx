@@ -13,7 +13,7 @@ type Size = {
 
 const sizes: Size[] = [
   { width: 500, height: 300, text: "", text2: "" },
-  { width: 300, height: 500, text: "Szoftverfejlesztő", text2: "és tesztelő - 2025" },
+  { width: 300, height: 500, text: "Szoftverfejlesztő", text2: `és tesztelő - ${new Date().getFullYear() + 1}` },
   { width: 500, height: 500, text: "", text2: "" },
 ];
 
@@ -22,7 +22,7 @@ const Hero = () => {
     <div className="relative min-h-screen overflow-x-clip py-96" id="hero">
       <div className="absolute inset-0 z-0 flex items-start justify-center overflow-hidden md:items-center">
         <h1 className="text-center text-[3rem] text-gray-800/30 dark:text-purple-400/10 font-bold whitespace-nowrap transition-colors md:text-[8rem]">
-          GYŐRI <br /> JEDLIK ÁNYOS <br /> TECHNIKUM
+          GYŐRI SZC<br /> JEDLIK ÁNYOS <br /> TECHNIKUM <br />
         </h1>
       </div>
 
@@ -41,7 +41,7 @@ const Hero = () => {
         >
           {sizes.map((size, index) => (
             <motion.div
-              className={`absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col justify-between shadow-[0_0_120px_inset]  shadow-purple-500/30 dark:shadow-purple-200/20`}
+              className={`absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col justify-between shadow-[0_0_120px_inset]  shadow-gray-500/30 dark:shadow-purple-200/20`}
               key={index}
               style={{ width: `${size.width}px`, height: `${size.height}px` }}
             >

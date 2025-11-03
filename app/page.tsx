@@ -13,8 +13,8 @@ export default function Home() {
     <div className="bg-gray-100 dark:bg-gray-900 transition-colors">
       <Navbar />
       <Hero />
-      <KeyMetrics />
       <TextReveal />
+      <KeyMetrics />
       <LogoAnimation />
       <Portfolio />
       <Services />

@@ -21,13 +21,15 @@ export default function TextReveal() {
   }, [scrollYProgress]);
 
 const words = [
-  "Szia",
-  "👋",
+  "Szia!",
+  "Én",
+  "a",
+  "Jedlikben",
+  "végzett",
   "szoftverfejlesztő",
   "és",
   "tesztelő",
   "vagyok",
-  "💻",
   "aki",
   "tiszta,",
   "megbízható",
@@ -57,7 +59,6 @@ const words = [
   "minőségű,",
   "hatékony",
   "megoldásokat.",
-  "🚀",
 ];
 
   // Segédfüggvény: lineáris interpoláció + clamp
@@ -79,7 +80,7 @@ const words = [
           const opacity = interp(progress, start, end, 0.2, 1); // számított érték
           return (
             <motion.span
-              className="mr-4 inline-block text-purple-200/90"
+              className="mr-4 inline-block text-gray-800/70 dark:text-purple-200/90"
               key={index}
               style={{ opacity }}
             >
