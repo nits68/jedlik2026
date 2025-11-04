@@ -1,4 +1,21 @@
-# Next.js-frontend-starter
+# Nyitott kapuk 2025
+
+## Hosting
+[Vercel](https://jedlik2026.vercel.app/)
+
+## Install
+### Install node packages
+```
+npm i
+```
+### Run app in DEV mode
+```
+npm run dev
+or
+Press Ctrl-Shift-B
+```
+
+
 
 ## 1. Projekt létrehozása
 
